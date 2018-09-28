@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AMD</title>
+    <link rel="shortcut icon" href="../../assets/img/logo.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/jquery-bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../../assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-5.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/daterangepicker.css">
+    <link rel="stylesheet" href="../../assets/css/amd.min.css">
+    <script src="../../assets/js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="skin-default sidebar-mini">
+    <div class="pace-loading">
+        <div class="pace-inactive">
+            <div class="pace-progress"></div>
+            <div class="pace-activity"></div>
+        </div>
+    </div>
+    <div class="command">
+        <button id="cmdBtnMove" class="btn btn-warning">
+            <i class="mdi mdi-share-variant hidden-lg hidden-md hidden-sm"></i>
+            <span class="hidden-xs">Di chuyển</span>
+        </button>
+        <button id="cmdBtnDelRestore" class="btn btn-danger">
+            <i class="mdi mdi-delete hidden-lg hidden-md hidden-sm"></i><span class="hidden-xs">Delete</span>
+        </button>
+        <button id="cmdBtnRemove" class="btn btn-danger">
+            <i class="mdi mdi-delete-forever hidden-lg hidden-md hidden-sm"></i><span class="hidden-xs">Remove</span>
+        </button>
+        <span><span class="selectedItem">0</span> item(s)</span>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="" class="logo hidden-xs">
+                <span class="logo-mini"><b>A</b></span>
+                <span class="logo-lg"><b>AMD</b></span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="navbar-btn">
+                            <button type="button" class="btn btn-sm btn-success"><i class="mdi mdi-check"></i><span>Update</span></button>
+                            <button type="button" class="btn btn-sm btn-danger"><i class="mdi mdi-close"></i><span>Cancel</span></button>
+                        </li>
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-email-outline"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>Support Team<small><i class="mdi mdi-clock-alert"></i> 5 mins</small></h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-bell-ring-outline"></i>
+                                <span class="label label-warning">10</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="mdi mdi-group text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-flag-outline-variantutline"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <h3>Design some buttons<small class="pull-right">20%</small></h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../../upload/users/avatar.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Jane Doe</span>
+                            </a>
+                            <ul class="dropdown-menu animated-dropdown-menu">
+                                <li class="user-header">
+                                    <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                                    <p><a href="">Jane Doe - Web Developer</a><small>Member since Nov. 2012</small></p>
+                                </li>
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center">
+                                            <a href="#">View the home page</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="pages/lockscreen.html" class="btn btn-default btn-flat">Lockscreen</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="pages/login.html" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="mdi mdi-settings"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="../../upload/users/avatar.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>Jane Doe</p>
+                        <a href="#"><i class="mdi mdi-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn"><button type="submit" name="search" id="search-btn" class="btn btn-flat"><i
+                                    class="mdi mdi-magnify"></i></button></span>
+                    </div>
+                </form>
+                <div class="main-menu">
+                    <ul class="sidebar-menu">
+                        <li class="header">MAIN NAVIGATION</li>
+                        <li class="active">
+                            <a href="../../index.html"><i class="mdi mdi-view-dashboard"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="../widgets.html">
+                                <i class="mdi mdi-widgets"></i> <span>Widgets</span>
+                                <span class="pull-right-container"><small class="label pull-right bg-green">new</small></span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-chart-pie"></i>
+                                <span>Charts</span>
+                                <span class="pull-right-container"><i class="mdi mdi-chevron-left pull-right"></i></span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="chartjs.html"><i class="mdi mdi-circle-outline"></i> ChartJS</a></li>
+                                <li><a href="morris.html"><i class="mdi mdi-circle-outline"></i> Morris</a></li>
+                                <li><a href="flot.html"><i class="mdi mdi-circle-outline"></i> Flot</a></li>
+                                <li><a href="inline.html"><i class="mdi mdi-circle-outline"></i> Inline
+                                        charts</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-laptop"></i>
+                                <span>UI Elements</span>
+                                <span class="pull-right-container"><i class="mdi mdi-chevron-left pull-right"></i></span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../UI/general.html"><i class="mdi mdi-circle-outline"></i> General</a></li>
+                                <li><a href="../UI/icons.html"><i class="mdi mdi-circle-outline"></i> Icons</a></li>
+                                <li><a href="../UI/buttons.html"><i class="mdi mdi-circle-outline"></i> Buttons</a></li>
+                                <li><a href="../UI/sliders.html"><i class="mdi mdi-circle-outline"></i> Sliders</a></li>
+                                <li><a href="../UI/timeline.html"><i class="mdi mdi-circle-outline"></i> Timeline</a></li>
+                                <li><a href="../UI/modals.html"><i class="mdi mdi-circle-outline"></i> Modals</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../forms.html" data-href="forms"><i class="mdi mdi-pencil-box"></i> <span>Forms</span></a>
+                        </li>
+                        <li>
+                            <a href="../tables.html" data-href="tables"><i class="mdi mdi-table"></i> <span>Tables</span></a>
+                        </li>
+                        <li>
+                            <a href="../calendar.html">
+                                <i class="mdi mdi-calendar"></i> <span>Calendar</span>
+                                <span class="pull-right-container"><small class="label pull-right bg-red">3</small><small
+                                        class="label pull-right bg-blue">17</small></span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-email"></i>
+                                <span>Mailbox</span>
+                                <span class="pull-right-container"><small class="label pull-right bg-yellow">12</small><small
+                                        class="label pull-right bg-green">16</small><small class="label pull-right bg-red">5</small></span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../mail/inbox.html" data-href="inbox"><i class="mdi mdi-circle-outline"></i>
+                                        Inbox<span class="pull-right-container"><span class="label label-primary pull-right">13</span></span></a></li>
+                                <li><a href="../mail/compose.html" data-href="compose"><i class="mdi mdi-circle-outline"></i>
+                                        Compose</a></li>
+                                <li><a href="../mail/read.html" data-href="read"><i class="mdi mdi-circle-outline"></i>
+                                        Read</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="mdi mdi-folder"></i> <span>Examples</span><span class="pull-right-container"><i
+                                        class="mdi mdi-chevron-left pull-right"></i></span></a>
+                            <ul class="treeview-menu">
+                                <li><a href="../profile.html" data-href="profile"><i class="mdi mdi-circle-outline"></i>
+                                        Profile</a></li>
+                                <li><a href="../login.html"><i class="mdi mdi-circle-outline"></i> Login</a></li>
+                                <li><a href="../register.html"><i class="mdi mdi-circle-outline"></i> Register</a></li>
+                                <li><a href="../lockscreen.html"><i class="mdi mdi-circle-outline"></i> Lockscreen</a></li>
+                                <li><a href="../404.html"><i class="mdi mdi-circle-outline"></i> 404 Error</a></li>
+                                <li><a href="../500.html"><i class="mdi mdi-circle-outline"></i> 500 Error</a></li>
+                                <li><a href="../pace.html"><i class="mdi mdi-circle-outline"></i> Pace Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-share"></i> <span>Multilevel</span>
+                                <span class="pull-right-container"><i class="mdi mdi-chevron-left pull-right"></i></span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="mdi mdi-circle-outline"></i> Level One</a>
+                                </li>
+                                <li class="treeview">
+                                    <a href="#"><i class="mdi mdi-circle-outline"></i> Level One<span class="pull-right-container"><i
+                                                class="mdi mdi-chevron-left pull-right"></i></span></a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="mdi mdi-circle-outline"></i> Level Two</a></li>
+                                        <li class="treeview"><a href="#"><i class="mdi mdi-circle-outline"></i> Level
+                                                Two<span class="pull-right-container"><i class="mdi mdi-chevron-left pull-right"></i></span></a>
+                                            <ul class="treeview-menu">
+                                                <li><a href="#"><i class="mdi mdi-circle-outline"></i> Level Three</a></li>
+                                                <li><a href="#"><i class="mdi mdi-circle-outline"></i> Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="mdi mdi-circle-outline"></i> Level One</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../documentation.html" data-href="documentation"><i class="mdi mdi-book-variant"></i>
+                                <span>Documentation</span></a></li>
+                        <li class="header">LABELS</li>
+                        <li><a href="#"><i class="mdi mdi-circle-outline text-red"></i> <span>Important</span></a></li>
+                        <li><a href="#"><i class="mdi mdi-circle-outline text-yellow"></i> <span>Warning</span></a></li>
+                        <li><a href="#"><i class="mdi mdi-circle-outline text-aqua"></i> <span>Information</span></a></li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Icons
+                    <small>Preview sample</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="mdi mdi-view-dashboard"></i> Home</a></li>
+                    <li><a href="#">Charts</a></li>
+                    <li class="active">Icons</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="nav-tabs-custom tab-primary">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab-1" data-toggle="tab" aria-expanded="false">Material
+                                        Design Icons</a></li>
+                                <li class="hidden-xs"><a href="#tab-2" data-toggle="tab" aria-expanded="false">Font
+                                        Awesome</a></li>
+                                <li class="dropdown hidden-lg hidden-md hidden-sm">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="current-tab-name">Tabs</span><span
+                                            class="mdi mdi-menu-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class=""><a href="#tab-2" data-toggle="tab" aria-expanded="true">Font
+                                                Awesome</a></li>
+                                    </ul>
+                                </li>
+                                <div class="box-tools">
+                                    <div class="input-group input-group-sm" style="width: 150px;">
+                                        <input type="text" id="search-icon" name="table_search" class="form-control form-control-border pull-right"
+                                            placeholder="Search">
+                                        <div class="input-group-btn">
+                                            <button type="submit" class="btn btn-default"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="tab-content pad0L pad0R">
+                                <div class="tab-pane active" id="tab-1">
+                                    <div class="demo-icons alert alert-info alert-dismissible">
+                                        <i id="demo-icon" class="mdi mdi-emoticon-neutral"></i>
+                                        <input type="text" id="input-icon" class="form-control" value="mdi mdi-emoticon-neutral"
+                                            readonly>
+                                    </div>
+                                    <div id="icons" class="icons"></div>
+                                </div>
+                                <div class="tab-pane" id="tab-2">
+                                    <div class="demo-icons alert alert-info alert-dismissible">
+                                        <i id="demo-icon-fa" class="far fa-smile"></i>
+                                        <input type="text" id="input-icon-fa" class="form-control" value="far fa-smile"
+                                            readonly>
+                                    </div>
+                                    <div id="icons-fa" class="icons"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="mdi mdi-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="mdi mdi-settings"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon mdi mdi-cake bg-red"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon mdi mdi-account bg-yellow"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon mdi mdi-email-outline bg-light-blue"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon mdi mdi-code-parentheses bg-green"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                                    <p>Execution time 5 seconds</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Custom Template Design<span class="label label-danger pull-right">70%</span></h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Update Resume<span class="label label-success pull-right">95%</span></h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Laravel Integration<span class="label label-warning pull-right">50%</span></h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Back End Framework<span class="label label-primary pull-right">68%</span></h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <input type="checkbox" class="filled-in" data-checked-color="orange" id="report" checked>
+                            <label for="report" class="control-sidebar-subheading">Report panel usage</label>
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <input type="checkbox" class="filled-in" id="allow" checked>
+                            <label for="allow" class="control-sidebar-subheading">Allow mail redirect</label>
+                            <p>
+                                Other sets of options are available
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <input type="checkbox" class="filled-in" id="expose" checked>
+                            <label for="expose" class="control-sidebar-subheading">Expose author name in posts</label>
+                            <p>
+                                Allow the user to show his name in blog posts
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <h3 class="control-sidebar-heading">Chat Settings</h3>
+                        <div class="form-group">
+                            <input type="checkbox" class="filled-in" id="chat-settings" checked>
+                            <label for="chat-settings" class="control-sidebar-subheading">Show me as online</label>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Turn off notifications
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Delete chat history
+                                <a href="javascript:void(0)" class="text-red pull-right"><i class="mdi mdi-delete"></i></a>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <script src="../../assets/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/chosen.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/materialdesignicons.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/fontawesomeicons.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/control-sidebar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/ajax-ready.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
